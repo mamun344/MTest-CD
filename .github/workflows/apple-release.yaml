@@ -3,37 +3,27 @@ name: Apple Release
 on:
   push:
     branches:
-      - apple-release
+      - main
 
 jobs:
   build-and-deploy-ios:
     runs-on: macos-latest
-    defaults:
-      run:
-        working-directory: app
+  
     steps:
       - name: Set up git and fetch all history for all branches and tags
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: "2.7"
-      - name: Bundle install for iOS Gemfile
-        timeout-minutes: 5
-        run: cd ./ios && bundle install
-      - name: Set up Flutter SDK
-        uses: subosito/flutter-action@v2
-        with:
-          flutter-version: "3.16.2"
-          channel: "stable"
-          architecture: x64
-          cache: true
-      - name: Set up melos
-        run: flutter pub global activate melos
-      - name: Melos Bootstrap
-        run: melos bs
+          ruby-version: "2.6"
+
+      # - name: Bundle install for iOS Gemfile
+      #   timeout-minutes: 5
+      #   run: cd ./ios && bundle install
+
       - name: Build and Deploy to TestFlight
         env:
           MATCH_PASSWORD: ${{ secrets.MATCH_PASSWORD }}
@@ -42,5 +32,4 @@ jobs:
           ASC_ISSUER_ID: ${{ secrets.ASC_ISSUER_ID }}
           ASC_KEY_P8: ${{ secrets.ASC_KEY_P8 }}
         run: |
-          cd ./ios
-          bundle exec fastlane release_beta
+          fastlane release_beta
