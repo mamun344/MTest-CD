@@ -100,7 +100,7 @@ platform :ios do
     puts "*** Build and sign iOS app release ***"
     build_app(
       skip_build_archive: true,
-      archive_path: "../build/ios/archive/MCTestCD.xcarchive",
+      archive_path: "../MCTestCD.xcarchive",
     )
   
     puts "*** Upload app to testflight ***"
