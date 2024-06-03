@@ -99,7 +99,7 @@ platform :ios do
   
     puts "*** Build and sign iOS app release ***"
     build_app(
-      skip_build_archive: true,
+      skip_build_archive: false,
       archive_path: "BUILD/MCTestCD.xcarchive",
     )
   
