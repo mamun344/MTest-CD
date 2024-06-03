@@ -86,10 +86,10 @@ platform :ios do
 
 
     increment_build_number(
-      build_number: (latest_build_number + 1),
+      build_number: (latest_build_number),
     )
 
-    puts "*** increment_build_number #{increment_build_number} ***"
+    # puts "*** increment_build_number #{increment_build_number} ***"
 
 
     #Dir.chdir "../.." do
@@ -100,7 +100,7 @@ platform :ios do
     puts "*** Build and sign iOS app release ***"
     build_app(
       skip_build_archive: false,
-      archive_path: "BUILDS/BONGO/MCTestCD.xcarchive",
+      archive_path: "BUILD/MCTestCD.xcarchive",
     )
   
     puts "*** Upload app to testflight ***"
