@@ -20,6 +20,9 @@ jobs:
         with:
           ruby-version: "2.6"
 
+      - name: Install Fastlane
+        run:  bundle install && bundle update
+
       # - name: Bundle install for iOS Gemfile
       #   timeout-minutes: 5
       #   run: cd ./ios && bundle install
