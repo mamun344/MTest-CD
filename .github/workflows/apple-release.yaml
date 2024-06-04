@@ -38,11 +38,10 @@ jobs:
           KEYCHAIN_PASSWORD: ${{ secrets.KEYCHAIN_PASSWORD }}
 
 
-      - name: Upload app-store ipa and dsyms to artifacts
-        uses: actions/upload-artifact@v2
+      - name: Upload dsyms to artifacts
+        uses: actions/upload-artifact@v4
         with:
-          name: app-store ipa & dsyms
-          path: |
-            ${{ github.workspace }}/*.app.dSYM.zip
+          name: dsyms
+          path: ${{ github.workspace }}/my_app.app.dSYM.zip
            
            
