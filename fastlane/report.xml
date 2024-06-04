@@ -5,57 +5,57 @@
     
     
       
-      <testcase classname="fastlane.lanes" name="00: default_platform" time="0.000211">
+      <testcase classname="fastlane.lanes" name="00: default_platform" time="0.000176">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="01: Switch to ios load_asc_api_token lane" time="7.3e-05">
+      <testcase classname="fastlane.lanes" name="01: Switch to ios load_asc_api_token lane" time="7.1e-05">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="02: app_store_connect_api_key" time="0.002212">
+      <testcase classname="fastlane.lanes" name="02: app_store_connect_api_key" time="0.002202">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="03: last_git_commit" time="0.063879">
+      <testcase classname="fastlane.lanes" name="03: last_git_commit" time="0.054445">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="04: sync_code_signing" time="2.068783">
+      <testcase classname="fastlane.lanes" name="04: sync_code_signing" time="3.231715">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="05: get_version_number" time="0.027531">
+      <testcase classname="fastlane.lanes" name="05: get_version_number" time="0.030671">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="06: latest_testflight_build_number" time="3.089527">
+      <testcase classname="fastlane.lanes" name="06: latest_testflight_build_number" time="3.048998">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="07: increment_build_number" time="0.163037">
+      <testcase classname="fastlane.lanes" name="07: increment_build_number" time="0.792657">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="08: increment_build_number" time="0.191109">
+      <testcase classname="fastlane.lanes" name="08: increment_build_number" time="0.197247">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="09: build_app" time="23.573848">
+      <testcase classname="fastlane.lanes" name="09: build_app" time="36.880039">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="10: upload_to_testflight" time="193.010604">
+      <testcase classname="fastlane.lanes" name="10: upload_to_testflight" time="156.745468">
         
       </testcase>
     
