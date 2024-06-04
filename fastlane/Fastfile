@@ -102,7 +102,7 @@ platform :ios do
     build_app(
       skip_build_archive: false,
       archive_path: "BUILD/MCTestCD.xcarchive"
-      # sdk: "15.1"
+      sdk: "15.0"
     )
   
     puts "*** Upload app to testflight ***"
