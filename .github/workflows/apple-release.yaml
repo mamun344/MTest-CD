@@ -38,10 +38,16 @@ jobs:
           KEYCHAIN_PASSWORD: ${{ secrets.KEYCHAIN_PASSWORD }}
 
 
-      - name: Upload dsyms to artifacts
+      - name: Upload dsym to artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: dsyms
-          path: ${{ github.workspace }}/my_app.app.dSYM.zip
+          name: dsym file
+          path: ${{ github.workspace }}/*.app.dSYM.zip
+
+
+      - name: List dSYM files
+      run: |
+          echo "List of dSYM bundles"
+          find ${{ github.workspace }} -name "*.dSYM"    
            
            
