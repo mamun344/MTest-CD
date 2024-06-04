@@ -46,7 +46,7 @@ jobs:
 
 
       - name: List dSYM files
-      run: |
+        run: |
           echo "List of dSYM bundles"
           find ${{ github.workspace }} -name "*.dSYM"    
            
