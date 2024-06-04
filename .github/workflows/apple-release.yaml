@@ -22,12 +22,10 @@ jobs:
           bundler-cache: true
 
 
-      # - name: Install Fastlane
-      #   run:  bundle install && bundle update
-
       - name: Bundle install for iOS Gemfile
         timeout-minutes: 5
         run: bundle install
+
 
       - name: Build and Deploy to TestFlight
         run: bundle exec fastlane ios release_beta
@@ -38,3 +36,13 @@ jobs:
           ASC_ISSUER_ID: ${{ secrets.ASC_ISSUER_ID }}
           ASC_KEY_P8: ${{ secrets.ASC_KEY_P8 }}
           KEYCHAIN_PASSWORD: ${{ secrets.KEYCHAIN_PASSWORD }}
+
+
+      - name: Upload app-store ipa and dsyms to artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: app-store ipa & dsyms
+          path: |
+            ${{ github.workspace }}/*.app.dSYM.zip
+           
+           
