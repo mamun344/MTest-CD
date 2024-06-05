@@ -1,2 +1,1 @@
-app_identifier("com.bongosolutions.bongo") # The bundle identifier of your app
-
+app_identifier("com.bongosolutions.bongo") 
