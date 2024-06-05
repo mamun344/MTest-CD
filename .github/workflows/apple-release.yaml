@@ -44,10 +44,4 @@ jobs:
           name: dsym file
           path: ${{ github.workspace }}/*.app.dSYM.zip
 
-
-      - name: List dSYM files
-        run: |
-          echo "List of dSYM bundles"
-          find ${{ github.workspace }} -name "*.dSYM"    
-           
            
